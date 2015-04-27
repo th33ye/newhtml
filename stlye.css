@@ -1,0 +1,506 @@
+/*==============================
+	GLOBALS
+===============================*/
+.body
+{
+	text-align:center;
+	background-image: url(images/BG.gif);
+	background-repeat:repeat-x;
+	background-position:top;
+	background-color:#1d0000;
+	margin-top:0px;
+}
+/*==============================
+	SITE WRAPPER
+===============================*/
+.site-wrapper
+{
+	width:992px;
+	margin:0px auto;
+}
+
+/*==============================
+	HEADER WRAPPER
+===============================*/
+.header-wrapper
+{
+	position:relative;
+	top:0px;
+	left:0px;
+	width:990px;
+	height:153px;
+}
+
+.header-title
+{
+	background-image:url(images/HeaderLogo.jpg);
+	position:absolute;
+	left:316px;
+	top:0px;
+	width:358px;
+	height:153px;
+}
+
+.header-left
+{
+	background-image:url(images/HeaderLeft.jpg);
+	position:absolute;
+	left:0px;
+	top:0px;
+	width:316px;
+	height:153px;
+	float:left;
+}
+.header-right
+{
+	background-image:url(images/HeaderRight.jpg);
+	position:absolute;
+	left:674px;
+	top:0px;
+	width:316px;
+	height:153px; 
+	float:right;
+}
+
+/*==============================
+	Navigation
+===============================*/
+.Nav-wrapper
+{
+	text-align:center;
+	float:left;
+	width:990px;
+	height:33px;
+}
+
+/*==============================
+	Navigation Buttons
+===============================*/
+
+.BtnHome
+{
+	background:url(images/Btn_Home_Norm.gif); 
+	background-repeat:no-repeat;
+	width:116px;
+	height:33px;
+	display:block;
+}
+
+.BtnHome:hover
+{
+	background:url(images/Btn_Home_over.gif);
+	background-repeat:no-repeat;
+}
+.BtnHomeActive
+{
+	background:url(images/Btn_Home_over.gif);
+	background-repeat:no-repeat;
+	width:116px;
+	height:33px;
+	display:block;
+}
+.BtnAbout
+{
+	background:url(images/Btn_About_Norm.gif); 
+	background-repeat:no-repeat;
+	width:111px;
+	height:33px;
+	display:block;
+}
+
+.BtnAbout:hover
+{
+	background:url(images/Btn_About_over.gif);
+	background-repeat:no-repeat;
+}
+.BtnAboutActive
+{
+	background:url(images/Btn_About_over.gif);
+	background-repeat:no-repeat;
+	width:111px;
+	height:33px;
+	display:block;
+}
+.BtnHowTo
+{
+	background:url(images/Btn_How2Play_Norm.gif); 
+	background-repeat:no-repeat;
+	width:121px;
+	height:33px;
+	display:block;
+}
+
+.BtnHowTo:hover
+{
+	background:url(images/Btn_How2Play_over.gif);
+	background-repeat:no-repeat;
+}
+.BtnHowToActive
+{
+	background:url(images/Btn_How2Play_over.gif);
+	background-repeat:no-repeat;
+	width:121px;
+	height:33px;
+	display:block;
+}
+.BtnRegister
+{
+	background:url(images/Btn_Register_Norm.gif); 
+	background-repeat:no-repeat;
+	width:99px;
+	height:33px;
+	display:block;
+}
+
+.BtnRegister:hover
+{
+	background:url(images/Btn_Register_over.gif);
+	background-repeat:no-repeat;
+}
+.BtnRegisterActive
+{
+	background:url(images/Btn_Register_over.gif);
+	background-repeat:no-repeat;
+	width:99px;
+	height:33px;
+	display:block;
+}
+
+.BtnCashier
+{
+	background:url(images/Btn_Cashier_Norm.gif); 
+	background-repeat:no-repeat;
+	width:93px;
+	height:33px;
+	display:block;
+}
+
+.BtnCashier:hover
+{
+	background:url(images/Btn_Cashier_over.gif);
+	background-repeat:no-repeat;
+}
+.BtnCashierActive
+{
+	background:url(images/Btn_Cashier_over.gif);
+	background-repeat:no-repeat;
+	width:93px;
+	height:33px;
+	display:block;
+}
+.BtnSupport
+{
+	background:url(images/Btn_Support_Norm.gif); 
+	background-repeat:no-repeat;
+	width:95px;
+	height:33px;
+	display:block;
+}
+
+.BtnSupport:hover
+{
+	background:url(images/Btn_Support_over.gif);
+	background-repeat:no-repeat;
+}
+.BtnSupportActive
+{
+	background:url(images/Btn_Support_over.gif);
+	background-repeat:no-repeat;
+	width:95px;
+	height:33px;
+	display:block;
+}
+
+
+.BtnAboutCF
+{
+	background:url(images/Btn_AboutCock_Norm.gif); 
+	background-repeat:no-repeat;
+	width:194px;
+	height:33px;
+	display:block;
+}
+
+.BtnAboutCF:hover
+{
+	background:url(images/Btn_AboutCock_over.gif);
+	background-repeat:no-repeat;
+}
+.BtnAboutCFActive
+{
+	background:url(images/Btn_AboutCock_over.gif);
+	background-repeat:no-repeat;
+	width:194px;
+	height:33px;
+	display:block;
+}
+.BtnLicense
+{
+	background:url(images/Btn_OurLicence_Norm.gif); 
+	background-repeat:no-repeat;
+	width:161px;
+	height:33px;
+	display:block;
+}
+
+.BtnLicense:hover
+{
+	background:url(images/Btn_OurLicence_over.gif);
+	background-repeat:no-repeat;
+}
+.BtnLicenseActive
+{
+	background:url(images/Btn_OurLicence_over.gif);
+	background-repeat:no-repeat;
+	width:161px;
+	height:33px;
+	display:block;
+	
+}
+
+/*==============================
+		BODY WRAPPER
+===============================*/
+.body-wrapper
+{
+	position:relative;
+	float:left;
+	width:990px;
+	height:400px;
+	background:url('images/BodyBG.jpg');
+	background-repeat:repeat-x;
+
+}
+
+.LeftPanel
+{
+	width:160px;
+	height:400px;
+	background-repeat:no-repeat;
+	background-image:url(images/bodyDivider.jpg);
+	background-position: 156px 0px;
+}
+
+#LeftPanel
+{
+	padding-top:10px;
+	padding-left:20px;
+	padding-right:10px;
+	font-family:Arial, Helvetica, sans-serif;
+	font-size:12px;
+	text-align:left;
+	font-weight: normal;
+	color:#f8eaa9;
+}
+
+#LeftPanel a 
+{
+	color:#f8eaa9;
+	font-style:normal;
+	fon
+}
+.RightPanel 
+{
+	
+	padding-top:10px;
+	padding-left:2px;
+	padding-right:2px;
+	font-family:Arial, Helvetica, sans-serif;
+	font-size:12px;
+	text-align:center;
+	font-weight: normal;
+	color:#f8eaa9;
+}
+
+.creditfont 
+{
+	font-family:Arial, Helvetica, sans-serif;
+	font-size:11px;
+	text-align:center;
+	font-weight: normal;
+	color:#fcc000;
+}
+.BtnLogin
+{
+	position:absolute;
+	left:882px;
+	background:url(images/Btn_Login_Norm.gif);
+	background-repeat:no-repeat;
+	width:76px;
+	height:32px;
+	display:block;
+	top: 440px;
+}
+.BtnLogin:hover
+{
+	background:url(images/Btn_Login_Over.gif); 
+	background-repeat:no-repeat;
+	width:76px;
+	height:32px;
+	display:block;
+}
+
+/*==============================
+		Text Box
+===============================*/
+.Textbox
+{
+	border:solid 1px #b86666;
+	background:#983333;
+	color:#FFFFFF;
+	padding:2px;
+	text-align:left;
+	height:18px;
+}
+
+.TextArea
+{
+	border:solid 1px #b86666;
+	background:#983333;
+	color:#FFFFFF;
+	padding:2px;
+	text-align:left;
+	height:40px;
+	font:Arial, Helvetica, sans-serif;
+}
+
+.Checkbox
+{
+	border:solid 1px #b86666;
+	background:#983333;
+	
+	padding:0px;
+	text-align:center;
+	height:14px;
+	width:14px;
+}
+
+.content
+{
+	width:650px;
+	height:auto;
+	background-repeat:no-repeat;
+	background-image:url(images/bodyDivider.jpg);
+	background-position:646px 0px;
+}
+
+
+.contentnav
+{
+	text-align:right;
+	width:650px;
+	height:auto;
+	background-repeat:no-repeat;
+	background-image:url(images/bodyDivider.jpg);
+	background-position:646px 0px;
+	font-family:Arial, Helvetica, sans-serif;
+	font-size:12px;
+	text-align:justify;
+	font-weight: normal;
+}
+#contentnav a 
+{
+	color:#FF9900;
+	font-family:Arial, Helvetica, sans-serif;
+	font-size:12px;
+	text-align:right;
+	font-weight: bold;
+}
+
+.registercontent
+{
+	padding-top:10px;
+	padding-left:20px;
+	padding-right:20px;
+	width:650px;
+	height:auto;
+}
+#registercontent
+{
+	font-family:Arial, Helvetica, sans-serif;
+	font-size:12px;
+	text-align:justify;
+	font-weight: normal;
+	color:#f8eaa9;
+}
+#content
+{
+	padding-top:10px;
+	padding-left:20px;
+	padding-right:20px;
+	font-family:Arial, Helvetica, sans-serif;
+	font-size:12px;
+	text-align:justify;
+	font-weight: normal;
+	color:#f8eaa9;
+}
+
+#content a , p
+{
+	color:#f8eaa9;
+}
+
+.content li
+{
+	
+	padding-left:10px;
+	color:#f8eaa9;
+}
+.content b, strong, em
+{
+	font-weight:bold;
+	color:#FFCC00;
+}
+
+
+
+.ads
+{
+	width:990px;
+	height:143px;
+}
+
+.adspace1
+{
+	width:330px;
+	height:143px;
+	background-image:url(images/Ad1.jpg);
+}
+.adspace2
+{
+	width:330px;
+	height:143px;
+	background-image:url(images/Ad2.jpg);
+}
+.adspace3
+{
+	width:330px;
+	height:143px;
+	background-image:url(images/Ad3.jpg);
+}
+
+.TextBarBottom
+{
+	width:990px;
+	height:71px;
+	background-image:url(images/TextBar_Bottom.jpg);
+}
+.FooterLogoBar
+{
+	width:990px;
+	height:72px;
+	background-image:url(images/FooterLogoBar.jpg);
+}
+/*==============================
+		FOOTER
+===============================*/
+.footer
+{
+	padding-top:14px;
+	font-family:Arial, Helvetica, sans-serif;
+	font-size:10px;
+	text-align:center;
+	font-weight: normal;
+	color:#f8eaa9;
+	height:48px;
+}

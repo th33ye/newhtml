@@ -1,0 +1,43 @@
+# phpstorm project files
+.idea
+
+# netbeans project files
+nbproject
+
+# zend studio for eclipse project files
+.buildpath
+.project
+.settings
+
+# windows thumbnail cache
+Thumbs.db
+
+# betnow-from-arvin (copy of betnow folder)
+betnow-from-arvin
+
+# chat (chat module to be remove)
+chat
+
+# chat-jq (chat-jq module to be remove)
+chat-jq
+
+# betting (remains of old application)
+betting
+
+# images (folder where images are stored)
+images
+
+# img (folder where web front images are stored)
+img
+
+# monitorbetting-from-arvin (copy of monitorbetting)
+monitorbetting-from-arvin
+
+# nimages (folder of other images)
+nimages
+
+# test-dir (folder of test unit)
+test-dir
+
+# webalizer (folder of webalizer)
+webalizer

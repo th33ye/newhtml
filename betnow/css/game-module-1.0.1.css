@@ -1,0 +1,239 @@
+html, body, div, ul, ol, li, dl, dt,
+dd, h1, h2, h3, h4, h5, h6, pre, form,
+p, blockquote, fieldset, input, abbr, article,
+aside, command, details, figcaption, figure, footer,
+header, hgroup, mark, meter, nav, output, progress,
+section, summary, time { margin: 0; padding: 0; }
+
+body {
+    color: #7F7F7F;
+    font-family: "Lucida Grande","Lucida Sans Unicode",Helvetica,Arial,Verdana,sans-serif;
+    font-size: 12px;
+    line-height: 18px;
+    left: 0;
+    top: 0;
+    z-index: -1;
+    background-color: #000000;
+    /* background: url('../img/bgray-gradient-bg.png') no-repeat center center fixed; */
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
+    background-size: cover;
+}
+
+#game_container {
+    width: 1090px;
+    border: 1px #DBDCDC solid;
+    margin: 2px auto;
+    padding: 5px;
+}
+
+#game_header_container {
+    width: 1090px;
+    border: 1px #DBDCDC solid;
+}
+
+#game_header_arena {
+    width: 1090px;
+    font-size: 2em;
+    text-align: center;
+    padding: 5px 0;
+    background: url('../img/arena-bar-red.png') repeat-x;
+    color: #fff;
+}
+
+#game_detail_container {
+    position: relative;
+    height: 40px;
+    margin-top: 5px;
+    background: url('../img/game-detail-bg.png') repeat-x;
+    border-top: 1px #DBDCDC solid;
+/*    border-bottom: 1px #DBDCDC solid;
+    color: #0d2230; */
+}
+
+#game_header_credit {
+    position: absolute;
+    top: 0;
+    left:0;
+    width: 160px;
+    height: 40px;
+    text-align: center;
+    border-right: 1px #A3A3A3 solid;
+}
+
+.game_header_label {
+    color: #2B2B2B;
+    font-size: .75em;
+}
+
+.game_header_value {
+/*    color: #FBFBFB; */
+    color: #2B2B2B;
+    font-size: 1.5em;
+}
+
+#game_header_status {
+    position: absolute;
+    top: 0;
+    left: 160px;
+    width: 710px;
+    height: 40px;
+    text-align: center;
+    border-right: 1px #A3A3A3 solid;
+}
+
+#game_username {
+    display: none;
+}
+
+#game_fight_no {
+    position: absolute;
+    width: 100px;
+    height: 38px;
+    text-align: center;
+}
+
+#game_fight_status {
+    position: absolute;
+    left: 100px;
+    width: 390px;
+    height: 38px;
+    text-align: center;
+}
+
+#game_fight_result {
+    position: absolute;
+    left: 490px;
+    width: 220px;
+    height: 38px;
+    text-align: center;
+}
+
+#game_detail_container {
+    position: relative;
+    height: 40px;
+    margin-top: 5px;
+    background: url('../img/game-detail-bg.png') repeat-x;
+    border-top: 1px #DBDCDC solid;
+    border-bottom: 1px #DBDCDC solid;
+}
+
+#game_menu_container {
+    position: absolute;
+    top: 0;
+    left: 870px;
+    width: 220px;
+    height: 40px;
+    text-align: right;
+}
+
+#game_module_container {
+    position: relative;
+    margin-top: 5px;
+    width: 1090px;
+    height: 615px;
+/*    border: 1px #DBDCDC solid;
+    border: 1px #00008b solid; */
+}
+
+#running-result {
+    position: absolute;
+    margin: 0;
+    padding: 0;
+    border: 1px #DBDCDC solid;
+    width: 60px;
+    height: 610px;
+    overflow: auto;
+    background-color: #A5A5A5;
+}
+
+#running-result #tblResults {
+/*    color: #FFF; */
+    color: #000;
+}
+
+#video_chat_container {
+    position: absolute;
+    margin: 0;
+    padding: 0px;
+/*    border: 1px #8b0000 solid; */
+    left:70px;
+    height: 620px;
+    width: 660px;
+}
+
+#bg_player_container {
+    background: none repeat scroll 0% 0% rgb(13,27,14);
+    border-radius: 11px 11px 11px 11px;
+    margin: 0 auto;
+    height: auto;
+    padding: 9px;
+    width: 640px;
+    color: rgb(204,204,204);
+}
+
+#bet_container {
+    position: absolute;
+    margin: 0;
+    padding: 0px;
+    left:740px;
+    height: 620px;
+    width: 350px;
+    text-align: center;
+    /*    border: 1px #8b0000 solid; */
+}
+
+#total_bet {
+/*    border: 1px yellow dashed; */
+}
+
+#player_bet {
+/*    border: 1px #ffd700 dashed; */
+}
+
+#container {
+    margin-top: 5px;
+    height: 200px;
+    width: 660px;
+/*    border: 1px #DBDCDC solid; */
+}
+
+#container .chatArea {
+    overflow: auto;
+    height: 165px;
+    border-style: solid;
+    border-color: #888;
+    border-radius: 10px;
+    background-color: #CCC;
+    margin-bottom: 5px;
+    padding: 0.75em;
+    color: #000;
+}
+
+#container #msg-container {
+    width: 660px;
+    height: 170px;
+    border: 1px blue solid;
+    overflow-x: hidden;
+    overflow-y: scroll;
+}
+
+#container .header {
+    width: 650px;
+    height: 0px;
+    visibility: hidden;
+}
+
+#chat-form #chat-input {
+    width: 580px;
+    height: 30px;
+    padding: 0;
+    margin: 0;
+}
+
+#chat-form #chat-submit {
+    width: 70px;
+    height: 30px;
+    padding: 5px;
+}

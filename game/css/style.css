@@ -1,0 +1,196 @@
+/* 
+  
+*/
+
+*{
+    padding: 0;
+    margin: 0;
+}
+body{
+    text-align:center;
+}
+div#container{
+    width: 960px;
+    height: auto;
+    background-color:transparent;
+    margin: auto;
+    text-align:left;
+}
+
+div#container button, input[type="submit"]{
+    padding: 2px;
+}
+
+/* Header */
+div#header{
+    height: 50px;
+    border: 1px solid;
+}
+/* /Header */
+
+/* Body */
+div#body{
+    overflow: auto;
+    border: 1px solid;
+    border-top: none;
+    padding-bottom: 5px;
+}
+div#subHeader{
+    border-bottom: 1px solid;
+    display: block;
+}
+div#subHeader form{
+    float: right;
+}
+span#betBtns{
+    float: right;
+    width: 200px;
+    padding: 2px;
+}
+div#body h1, h4{
+    background-color:transparent;
+    display: inline;
+}
+
+span#videoBtn{
+    
+}
+
+div#body div#video h1{
+    background-color: transparent;
+}
+div#video{
+    height: 540px;
+    width: 720px;
+    background-color:transparent;
+    border-bottom: 1px solid;
+    float: left;
+    position: relative;
+    font-family: 'Times New Roman',Times,serif;
+}
+iframe{
+    position: absolute;
+    z-index: 1;
+}
+#closeVid{
+    height: 410px;
+    width: 639px;
+    background-color:black;
+    position: absolute;
+}
+div#board{
+    height: 540px;
+    width: 237px;
+    background-color:transparent;
+    border-bottom: 1px solid;
+    border-left: 1px solid;
+    float: left;
+}
+div#board table, div#board table td{
+    margin: auto;
+    border: solid 1px;
+    padding: 2px;
+    margin-top: 10px;
+}
+
+div#body div#controlButtons{
+    display: block;
+    height: auto;
+    background-color:transparent;
+    padding: 10px;
+    border-bottom: 1px solid;
+}
+div#body div#status {
+    background-color:transparent;
+    overflow: auto;
+    padding: 2px;
+}
+div#body div#status fieldset, form, textarea {
+    float: left;
+}
+div#body div#status form{
+    margin-left: 10px;
+}
+div#body div#status table td{
+   border: 1px solid;
+   padding: 2px;
+}
+div#body div#status table{
+   float: right;
+   margin-right: 10px;
+}
+fieldset#choose_arena{
+    padding: 10px;
+    margin: 10px;
+}
+
+/* Use Page*/
+div#userInfo{
+    width: 954px;
+    height: auto;
+    background-color: transparent;
+    float: left;
+    padding: 2px;
+}
+div#userInfo h5{
+    display: inline;
+    margin: 5px;
+}
+div#userInfo h5 span{
+    font-weight: normal;
+    font-style: italic;
+}
+div#userCtrlHead{
+    width: 954px;;
+    display: block;
+    height: auto;
+    background-color: transparent;
+    float: left;
+    padding: 2px;
+    text-align: center;
+}
+div#statusUser{
+    display: block;
+    height: auto;
+}
+div#placeBets{
+    background-color: transparent;
+    float: left;
+    margin-left: 120px;
+}
+div#placeBets span#walameronBtn{
+    display: block;
+    text-align: center;
+}
+div#placeBets h4{
+    display: block;
+    background-color: transparent;
+}
+div#placeBets table td{
+    padding: 1px;
+}
+div#placeBets table td#leftPlaceBet{
+    border-right: solid 1px;
+    padding-right: 10px;
+}
+div#placeBets table td#rightPlaceBet{
+    padding-left: 10px;
+}
+table#gmeStatUser{
+    float: right;
+}
+table#gmeStatUser td{
+    border: solid 1px;
+    padding: 2px;
+}
+/* /Use Page*/
+
+/* /Body */
+
+/* Footer */
+div#footer{
+    height: 50px;
+    border: 1px solid;
+    border-top: none;
+}
+/* /Footer */

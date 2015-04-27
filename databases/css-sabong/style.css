@@ -1,0 +1,153 @@
+@charset "utf-8";
+/* CSS Document */
+
+body
+{background:#000; font-family:Arial, Helvetica, sans-serif; color: #FFF;}
+#content_wrapper
+{ width: 950px; margin: 0 auto; position:relative; }
+.header
+{ position:absolute; background:url(images/header.jpg) no-repeat; width: 945px; height: 100px;}
+.logo
+{       width: 221px; height: 76px;
+        background: url(images/logo.png);
+        text-indent: -9999px;
+		margin-top: 13px; margin-left: 47px;
+}
+.banner
+{ background:url(images/banner.png); width: 240px; height: 36px; margin-left: 263px; margin-top: -46px;}
+
+#nav
+{ background:url(images/nav_bg.png); height: 43px; width: 945px; position:absolute; margin: 99px auto;}
+.menu_li
+{ float:left; margin-left: 39px; margin-top: -6px; list-style:none;}
+.menu
+{ margin-left: -38px;}
+a 
+{ border: none; text-decoration: none; color:#FFF; text-shadow: 1px 1px #000; font-weight:bold; font-size:14px;}
+a:hover
+{ background-color: #009; height: 100px;}
+
+.sliderbg{
+	position:absolute;
+	background:url(images/sliderbg.gif)no-repeat;
+	margin: 136px auto;
+	width:945px;
+	height:342px;
+	}
+
+.content{
+	position:absolute;
+	background-color: #b8b7b7;
+	margin: 471px auto;
+	width:945px;
+	height:552px;
+}
+.footer{
+	position:absolute;
+	background-image:url(images/footer.png);
+	width:945px;
+	height:43px;
+	margin:1023px auto;
+	}
+	
+.login{
+	position:absolute;
+	background-image:url(images/loginBg1.png);
+	width:421px;
+	height:297px;
+	vertical-align:top;
+	}
+	
+.loginHeader{
+	padding-left: 50px;
+	padding-top: 11px;
+	padding-bottom: 34px;
+	font-weight:bold; 
+	font-size:28px;
+	}
+	
+.loginFields{
+	padding-left: 50px;
+	padding-bottom: 10px;
+	text-shadow: #000;
+	}
+	
+.loginButton{
+	padding-left: 252px;
+	padding-top: 8px;
+	}
+	
+.textBox{
+	width: 300px;
+	height: 26px;
+	padding-left: 6px;
+	border: #06F thin solid;
+	
+	}
+	
+
+/*for slider*/
+#slider{
+	margin-left:84px;
+	margin-top: 4px;
+	}	
+#slider ul, #slider li{
+	margin:0;
+	padding:0;
+	list-style:none;
+	}
+#slider li{ 
+	width:779px;
+	height: 310px;
+	overflow:hidden; 
+	}	
+#prevBtn, #nextBtn{ 
+	display:block;
+	width:60px;
+	height:82px;
+	position:absolute;
+	left:10px;
+	top:120px;
+	}	
+#nextBtn{ 
+	left:879px;
+	}														
+#prevBtn a, #nextBtn a{  
+	display:block;
+	width:60px;
+	height:82px;
+	background:url(images/prevBtn.png) no-repeat 0 0;	
+	}	
+#nextBtn a{ 
+	background:url(images/nextBtn.png) no-repeat 0 0;	
+	}
+
+/*HOVER MENU*/
+
+#nav .select,
+#nav .current {
+margin:0; 
+padding:0; 
+list-style:none; 
+display:table-cell; 
+white-space:nowrap;
+}
+
+#nav .select a {
+display:block; 
+height:35px; 
+float:left; 
+padding:0 30px 0 30px; 
+text-decoration:none; 
+line-height:35px; 
+white-space:nowrap; 
+color:#2b3238;
+}
+
+#nav .select a:hover, 
+#nav .select li:hover a {
+	background-color:#FF0; 
+padding:0 0 0 15px; 
+cursor:pointer; 
+color:#2b3238;
+}

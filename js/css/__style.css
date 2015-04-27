@@ -1,0 +1,288 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1" />
+<title>Sabong</title>
+<link href="css/style.css" rel="stylesheet" type="text/css" />
+
+<?php 
+$_SESSION['userId'] = 1;
+$_SESSION['gameId'] = 1;
+?>
+
+
+<script src="finalStage.js" type="text/javascript"></script>
+<script src="dataPost.js" type="text/javascript"></script>
+<script src="tranCheck.js" type="text/javascript"></script>
+<script src="jquery-1.5.2.min.js" type="text/javascript"></script>
+
+<script>
+
+function ProcessRequest()
+{
+	$.ajax({url:"BettingConsole.php", success:function(result){$("#gameConsole").html(result);}});
+	GetOddIds('OddsList.php','');
+//	$.ajax({url:"OddsList.php", success:function(result){$("#oddIdList").val(result);}});
+	Start();	
+}
+
+
+function ProcessDisplay()
+{
+	//$.ajax({url:"GetOddsValues.php", success:function(result){FillOdds(result);}});
+
+	gameId = document.getElementById('gameId').value;	
+	arenaId = document.getElementById('arenaId').value;	
+	
+	PostOdds('GetOddsValues.php', 'gameId=' + gameId + '&arenaId=' + arenaId);
+	userId = document.getElementById('userId').value;
+	PostGameDisplay('GameDisplay.php', 'userId=' + userId);	
+
+}
+
+function FillOdds(result)
+{
+
+	var Odds = result.split(",");	
+			
+	for (x=0;x<Odds.length;x++)
+	{
+		var OddParts = Odds[x].split('|');
+		
+		if (OddParts[0] != '')
+		{
+			if (document.getElementById(OddParts[0]) != null &&  document.getElementById(OddParts[0]) != '')
+			{						
+			
+					document.getElementById(OddParts[0]).innerHTML = OddParts[1].replace('.00','');				
+				
+				
+			}
+		}
+		
+	}
+
+	//	CompareOdds(result);	
+	OddIds = document.getElementById("oddsIdList").value;
+
+	var OddList = OddIds.split(",");
+	
+	for (x=0;x<OddList.length;x++)
+	{
+//		alert(OddsIdsSplit[x]);
+		if (result.indexOf(OddList[x]) == -1)
+		{
+			document.getElementById(OddList[x]).innerHTML = '';
+		}
+	}	
+
+}
+
+
+
+
+function PlaceOrCancelBet(betMode)
+{
+	var qString = "";
+	var betAmount = "";
+	var betType = "";
+	var betOdds = "";
+	var betOddsCtrl = "";
+	var userId = "";
+	var gameId = "";
+	var arenaId = "";
+	
+	betAmount = document.getElementById('BetAmount').value;
+	userId = document.getElementById('userId').value;
+	gameId = document.getElementById('gameId').value;
+	arenaId = document.getElementById('arenaId').value;
+	
+	
+	if (document.getElementById('rbMeron').checked == true)
+	{
+		betType = 'm';
+	}
+	else
+	{
+		betType = 'w';
+	}
+
+ 	betOddsCtrl = document.getElementById('Odds');
+	betOdds = betOddsCtrl[betOddsCtrl.selectedIndex].id;
+			
+	qString = 'arenaId=' + arenaId + '&betAmount=' + betAmount + '&betType=' + betType + '&betOdds=' + betOdds + '&gameId=' + gameId + '&userId=' + userId + '&betMode=' + betMode  ;
+
+
+	var creditAvailable = 0;
+	//alert(document.getElementById("userCreditsHidden").value);
+	
+	if (document.getElementById("userCreditsHidden") != null)
+	{
+ 	 	creditAvailable = document.getElementById("userCreditsHidden").value;
+		
+		if (parseFloat(creditAvailable) >= parseFloat(betAmount))
+		{
+			PostData('PlaceBet.php', qString, 'BetStatus');
+		}
+		else
+		{
+			alert('Your credit is insufficient to place this bet.');
+		}
+	}
+	
+	
+	
+}
+
+function ConfirmBet()
+{
+	var yesno = confirm('Are you sure you want to place this bet on this odd? all bets cannot be cancelled. Click OK to proceed.' );
+	
+	if (yesno)
+	{	
+		PlaceOrCancelBet('place');
+	}
+
+}
+
+</script>
+</head>
+
+
+<body onLoad="ProcessRequest();">
+<div id="wrapper">
+<div id="header">Welcome</div>
+<div id="mid">
+	<div id="vid">Playing Live Video Stream... Enjoy!
+    	<ul>
+          <li>Credits: <strong><span class="style1">
+            <label id="userCredits"></label>
+          </span></strong></li>
+        <li>Location: <strong>PH</strong></li>
+        <li>IP Address:<strong></strong></li>
+        <li>Username: <strong></strong>        </li>
+    	</ul>
+        <div id="video">
+        <!--<iframe title="YouTube video player" width="480" height="390" src="http://www.youtube.com/embed/8IBbqbxA7zA" frameborder="0" allowfullscreen></iframe>--><br />
+        <br />
+              Join the live betting now!<br />
+		Load you account!<br />
+		Call our customer support toll free from US and Canada, 1-888-910-7555 or <br />
+		skype account: www.sabongsabong.com, csupport1.sabong.com,<br />
+		csupport2.sabongsabong.com
+		</div>
+    </div>
+    <div id="bet">
+    	
+        <div id="bet0">
+    	<div id="bet1"><strong>MY BETS</strong></div>
+      <div id="bet2"><strong>ALL BETS</strong></div>
+      </div>
+      
+      <div id="gameConsole">
+        
+      </div>
+      
+    </div>
+</div>
+<div id="footer">
+    	<div id="foot1">
+    	 <table width="100%" border="0" cellpadding="0" cellspacing="3">
+            <tr>
+              <td width="33%"><label></label></td>
+              <td width="33%"><input type="radio" name="radio" id="rbWala" value="betType" />
+Wala</td>
+              <td width="33%"><div id="BetStatus">
+                <input name="radio" type="radio" id="rbMeron" value="betType" checked="checked" />
+                Meron</div></td>
+            </tr>
+            <tr>
+              <td >Odds </td>
+              <td><select name="Odds" id="Odds">
+                  <?php 
+		
+			include 'dbConn.php';
+			$result = mysql_query("SELECT * FROM BetOddsList");
+			$outputStr = ""; 
+			
+			while ($row = mysql_fetch_array($result))
+			{				
+				$outputStr = $outputStr . "<option id='" . $row['Bet_Odd_Id'] . "'>" .  $row['Bet_OddW'] . "-" . $row['Bet_OddM'] . "</option>";
+			}
+
+			echo $outputStr;
+			mysql_close();
+					
+		?>
+                </select></td>
+              <td><label></label></td>
+            </tr>
+            <tr>
+              <td>Amount</td>
+              <td><select name="BetAmount" id="BetAmount">
+                <?php 
+		
+			include 'dbConn.php';
+			$result = mysql_query("SELECT * FROM BetAmountList");
+			$outputStr = ""; 
+			
+			while ($row = mysql_fetch_array($result))
+			{				
+				$outputStr = $outputStr . "<option id='betAmount" . $row['Amount'] . "'>" .  $row['Amount'] . "</option>";
+			}
+
+			echo $outputStr;
+			mysql_close();
+					
+		?>
+              </select></td>
+              <td>&nbsp;</td>
+            </tr>
+            <tr>
+              <td colspan="3" align="center">&nbsp;</td>
+            </tr>
+            <tr>
+              <td colspan="3" align="center"><input name="btnPlaceBet" type="button" class="submit" id="btnPlaceBet" onclick="ConfirmBet();" value="Place Bet"  width="40"/></td>
+            </tr>
+          </table> 
+</div>
+		<div id="foot2">
+		  <div id="menu">
+          <ul>
+          <li>
+            <h1>Administration</h1>
+          </li>
+          <li name="btnCreateNewFight" id="btnCreateNewFight" value="Create New Fight" onclick="SetModule(1);"><input type="submit" class="submit" value="Create New Fight"/></li>
+          <li name="btnCloseBetting" id="btnCloseBetting" value="Close Betting" onclick="SetModule(2);"><input type="submit" class="submit" value="Close Betting"/></li>
+          <li name="btnAnnounceMeronAsWinner" id="btnAnnounceMeronAsWinner" value="Announce Meron as Winner" onclick="SetModule(3);"><input type="submit" class="submit" value="Announce Meron as Winner"/></li>
+          <li name="btnAnnounceWalaAsWinner" id="btnAnnounceWalaAsWinner" value="Announce Wala as Winner" onclick="SetModule(4);"><input type="submit" class="submit" value="Announce Wala as Winner"/></li>
+          <li name="btnSetAsDraw" id="btnSetAsDraw" value="Game Draw" onclick="SetModule(5);"><input type="submit" class="submit" value="Game Draw"/></li>
+          <li name="btnSetAsCancelled" id="btnSetAsCancelled" value="Game Cancelled" onclick="SetModule(6);"><input type="submit" class="submit" value="Game Cancelled"/></li>
+          <li></li>
+          </ul>
+          </div>
+		  
+</div>
+        <div id="foot3"><table width="100%" border="0" cellpadding="0" cellspacing="3">
+                  <tr>
+                    <td colspan="2" align="center"><h1><strong>GAME RESULT</strong></h1></td>
+                  </tr>
+                  <tr>
+                    <td width="50%">Fight Number</td>
+                    <td width="50%"><div id="gameNo"></div></td>
+                  </tr>
+                  <tr>
+                    <td>Fight Result</td>
+                    <td><div id="gameResult"></div></td>
+                  </tr>
+                  <tr>
+                    <td>Betting Status</td>
+                    <td><div id="betStatus"></div></td>
+                  </tr>
+    </table></div>
+  </div>
+</div>
+
+
+</body>
+</html>

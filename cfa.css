@@ -1,0 +1,493 @@
+/*==============================
+	GLOBALS
+===============================*/
+.body
+{
+	text-align:center;
+	background-image: url(images/BG.gif);
+	background-color:#180304;
+	margin: 0px;
+}
+
+
+/*==============================
+	SITE WRAPPER
+===============================*/
+.site-wrapper
+{
+	width:100%;
+	height:auto;
+	margin:0px;
+	padding: 0px;
+	background-image:url(images/TopBG.gif);
+	background-repeat:repeat-x;
+	background-position:top;
+	border:solid 0px #0F0;
+}
+
+/*==============================
+	HEADER WRAPPER
+===============================*/
+.header-wrapper
+{
+	margin: 0px;
+	width:1280px;
+	height:165px;
+	background-image:url(images/headerBG2.jpg);
+	border:solid 0px #0F0;
+	
+}
+
+
+/*==============================
+	Navigation
+===============================*/
+.Nav-wrapper
+{
+	text-align:center;
+	width:1000px;
+	height:31px;
+	border:0px;
+	padding: 0px;
+	
+}
+
+/*==============================
+	Navigation Buttons
+===============================*/
+.navStart
+{
+	background:url(images/NavStart.gif); 
+	background-repeat:no-repeat;
+	width:30px;
+	height:31px;
+	display:block;
+}
+
+.navEnd
+{
+	background:url(images/NavEnd.gif); 
+	background-repeat:no-repeat;
+	width:36px;
+	height:31px;
+	display:block;
+}
+.BtnHome
+{
+	background:url(images/Btn_Home_Norm.gif); 
+	background-repeat:no-repeat;
+	width:88px;
+	height:31px;
+	display:block;
+}
+
+.BtnHome:hover
+{
+	background:url(images/Btn_Home_over.gif);
+	background-repeat:no-repeat;
+}
+.BtnHomeActive
+{
+	background:url(images/Btn_Home_over.gif);
+	background-repeat:no-repeat;
+	width:88px;
+	height:31px;
+	display:block;
+}
+.BtnAbout
+{
+	background:url(images/Btn_About_Norm.gif); 
+	background-repeat:no-repeat;
+	width:112px;
+	height:31px;
+	display:block;
+}
+
+.BtnAbout:hover
+{
+	background:url(images/Btn_About_over.gif);
+	background-repeat:no-repeat;
+}
+.BtnAboutActive
+{
+	background:url(images/Btn_About_over.gif);
+	background-repeat:no-repeat;
+	width:112px;
+	height:31px;
+	display:block;
+}
+.BtnHowTo
+{
+	background:url(images/Btn_How2Play_Norm.gif); 
+	background-repeat:no-repeat;
+	width:125px;
+	height:31px;
+	display:block;
+}
+
+.BtnHowTo:hover
+{
+	background:url(images/Btn_How2Play_over.gif);
+	background-repeat:no-repeat;
+}
+.BtnHowToActive
+{
+	background:url(images/Btn_How2Play_over.gif);
+	background-repeat:no-repeat;
+	width:125px;
+	height:31px;
+	display:block;
+}
+.BtnRegister
+{
+	background:url(images/Btn_Register_Norm.gif); 
+	background-repeat:no-repeat;
+	width:95px;
+	height:31px;
+	display:block;
+}
+
+.BtnRegister:hover
+{
+	background:url(images/Btn_Register_over.gif);
+	background-repeat:no-repeat;
+}
+.BtnRegisterActive
+{
+	background:url(images/Btn_Register_over.gif);
+	background-repeat:no-repeat;
+	width:95px;
+	height:31px;
+	display:block;
+}
+
+.BtnCashier
+{
+	background:url(images/Btn_Cashier_Norm.gif); 
+	background-repeat:no-repeat;
+	width:92px;
+	height:31px;
+	display:block;
+}
+
+.BtnCashier:hover
+{
+	background:url(images/Btn_Cashier_over.gif);
+	background-repeat:no-repeat;
+}
+.BtnCashierActive
+{
+	background:url(images/Btn_Cashier_over.gif);
+	background-repeat:no-repeat;
+	width:92px;
+	height:31px;
+	display:block;
+}
+.BtnSupport
+{
+	background:url(images/Btn_Support_Norm.gif); 
+	background-repeat:no-repeat;
+	width:102px;
+	height:31px;
+	display:block;
+}
+
+.BtnSupport:hover
+{
+	background:url(images/Btn_Support_over.gif);
+	background-repeat:no-repeat;
+}
+.BtnSupportActive
+{
+	background:url(images/Btn_Support_over.gif);
+	background-repeat:no-repeat;
+	width:102px;
+	height:31px;
+	display:block;
+}
+
+
+.BtnAboutCF
+{
+	background:url(images/Btn_AboutCock_Norm.gif); 
+	background-repeat:no-repeat;
+	width:189px;
+	height:31px;
+	display:block;
+}
+
+.BtnAboutCF:hover
+{
+	background:url(images/Btn_AboutCock_over.gif);
+	background-repeat:no-repeat;
+}
+.BtnAboutCFActive
+{
+	background:url(images/Btn_AboutCock_over.gif);
+	background-repeat:no-repeat;
+	width:189px;
+	height:31px;
+	display:block;
+}
+.BtnLicense
+{
+	background:url(images/Btn_OurLicence_Norm.gif); 
+	background-repeat:no-repeat;
+	width:131px;
+	height:31px;
+	display:block;
+}
+
+.BtnLicense:hover
+{
+	background:url(images/Btn_OurLicence_over.gif);
+	background-repeat:no-repeat;
+}
+.BtnLicenseActive
+{
+	background:url(images/Btn_OurLicence_over.gif);
+	background-repeat:no-repeat;
+	width:131px;
+	height:31px;
+	display:block;
+	
+}
+
+/*==============================
+		BODY WRAPPER
+===============================*/
+.body-wrapper
+{
+	position:relative;
+	width:1000px;
+	height:400px;
+	margin: 0px;
+	padding:0px;
+	background:url('images/MainBodyBG.gif');
+	background-repeat:repeat-y;
+	text-align:center;
+
+}
+
+.bodyTop
+{
+	width:1000px;
+	height:29px;
+	background:url('images/MainBodyTop.gif');
+	background-repeat:no-repeat;
+}
+
+
+.bodyBottom
+{
+	width:1000px;
+	height:29px;
+	background:url('images/MainBodyBottom.gif');
+	background-repeat:no-repeat;
+}
+.LeftPanel
+{
+	width:160px;
+	height:400px;
+	background-repeat:no-repeat;
+	background-image:url(images/bodyDivider.jpg);
+	background-position: 156px 0px;
+}
+
+#LeftPanel
+{
+	padding-top:10px;
+	padding-left:10px;
+	padding-right:10px;
+	font-family:Arial, Helvetica, sans-serif;
+	font-size:12px;
+	text-align:center;
+	font-weight: normal;
+	color:#9e0b0f;
+	list-style-type: none;
+
+}
+
+
+
+li
+{
+	background:url(images/Btn_LeftPanel_On.gif);
+	background-repeat:no-repeat;
+	color:#9e0b0f;
+	padding-top: 6px;
+	width:145px;
+	height:29px;
+	display:block;
+}
+
+li a
+{
+	text-decoration:none;
+	font-weight:bold;
+	color:#9e0b0f;
+}
+
+li:hover
+{
+	background:url(images/Btn_LeftPanel_Over.gif); 
+	background-repeat:no-repeat;
+}
+
+.RightPanel 
+{
+	padding-top:10px;
+	padding-left:2px;
+	padding-right:2px;
+	font-family:Arial, Helvetica, sans-serif;
+	font-size:12px;
+	text-align:center;
+	font-weight: normal;
+	color:#9e0b0f;
+}
+
+#Online
+{
+	background:url(images/Online.gif);
+	background-repeat:no-repeat;
+	text-decoration:none;
+	font-weight:bold;
+	color:#000000;
+	padding-top: 5px;
+	width:145px;
+	height:29px;
+	display:block;
+}
+
+#Offline
+{
+	background:url(images/Offline.gif);
+	background-repeat:no-repeat;
+	text-decoration:none;
+	font-weight:bold;
+	color:#000000;
+	padding-top: 5px;
+	width:145px;
+	height:29px;
+	display:block;
+}
+
+.creditfont 
+{
+	
+	font-family:Arial, Helvetica, sans-serif;
+	font-size:11px;
+	text-align:center;
+	font-weight: normal;
+	color:#fcc000;
+}
+.BtnLogin
+{
+	position:absolute;
+	left:882px;
+	background:url(images/Btn_Login_Norm.gif);
+	background-repeat:no-repeat;
+	width:76px;
+	height:32px;
+	display:block;
+	top: 440px;
+}
+.BtnLogin:hover
+{
+	background:url(images/Btn_Login_Over.gif); 
+	background-repeat:no-repeat;
+	width:76px;
+	height:32px;
+	display:block;
+}
+
+/*==============================
+		Text Box
+===============================*/
+.Textbox
+{
+	border:solid 1px #9e0b0f;
+	background:#feebc5;
+	color:#000000;
+	padding:2px;
+	text-align:center;
+	height:18px;
+}
+
+.Checkbox
+{
+	border:solid 1px #9e0b0f;
+	background:#feebc5;
+	
+	padding:0px;
+	text-align:center;
+	height:14px;
+	width:14px;
+}
+
+.content
+{
+	width:650px;
+	height:auto;
+	background-repeat:no-repeat;
+	background-image:url(images/bodyDivider.jpg);
+	background-position:646px 0px;
+}
+
+.registercontent
+{
+	padding-top:10px;
+	padding-left:20px;
+	padding-right:20px;
+	width:650px;
+	height:auto;
+}
+#registercontent
+{
+	font-family:Arial, Helvetica, sans-serif;
+	font-size:12px;
+	text-align:justify;
+	font-weight: normal;
+	color:#9e0b0f;
+}
+#content
+{
+	padding-top:10px;
+	padding-left:20px;
+	padding-right:20px;
+	font-family:Arial, Helvetica, sans-serif;
+	font-size:12px;
+	text-align:justify;
+	font-weight: normal;
+	color:#9e0b0f;
+}
+
+
+.TextBarBottom
+{
+	width:990px;
+	height:71px;
+	background-image:url(images/TextBar_Bottom.jpg);
+}
+.FooterBar
+{
+	width:1000px;
+	height:47px;
+	background-image:url(images/FooterBar.gif);
+}
+/*==============================
+		FOOTER
+===============================*/
+.footer
+{
+	padding-top:14px;
+	font-family:Arial, Helvetica, sans-serif;
+	font-size:10px;
+	text-align:center;
+	font-weight: normal;
+	color:#ffa801;
+	height:48px;
+	width:1000px;
+	border:solid 0px #0F0;
+
+}

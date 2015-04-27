@@ -1,0 +1,25 @@
+*                       { margin: 0; padding: 0; }
+body                    { font: 12px "Lucida Grande", Sans-Serif; background: url(images/bg.png); }
+
+#chat-container { width: 720px; height: 235px; background: none repeat scroll 0% 0% rgba(0,0,0,0.2); padding: 5px; }
+#chat-title { text-align: center; }
+#chat-title h2 { color: #fa9f00; font: 15px Helvetica, Sans-Serif; font-weight: bold; margin: 0 0 0px 0; }
+
+#chat-wrap { border: 1px solid #eee; margin: 0; }
+#chat-area { height: 140px; overflow: auto; padding: 5px; background: none repeat scroll 0% 0% white; }
+
+#chat-area span { color: white; background: #333; padding: 4px 8px; -moz-border-radius: 5px; -webkit-border-radius: 8px; margin: 0 5px 0 0; }
+#chat-area p { padding: 8px 0; border-bottom: 1px solid #ccc; }
+
+#game-result { background: url("images/menu-bg.png") repeat-x scroll center top rgb(250,250,250); width: 720px; height: 25px; margin: 2px 0; }
+#game-result #gr-left { float: left; margin-left: 5px; }
+#game-result #gr-center { float: left; margin-left: 50px; }
+#game-result #gr-right { float: left; margin-left: 45px; }
+.result { background-color: #ae1a00; color: #fff; height: 18px; margin: 2px; border: 1px solid black; font-weight: bold; text-align: center;}
+.gno { width: 50px; }
+.gstat { width: 260px; }  
+
+#msg-area { position: relative; width: 720px; height: 40px; }
+#send-message-area p { float: left; color: white; padding-top: 0px; font-size: 14px; }
+#sendie { font: 12px "Lucida Grande", Sans-serif; padding: 4px; width: 710px; height: 25px; resize: none; }
+#btn-send { position: absolute; top: 0; right: 0; z-index: 20; margin: 3px 3px; width: 60px; height: 30px; }

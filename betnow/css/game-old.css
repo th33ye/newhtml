@@ -1,0 +1,109 @@
+#gameConsole {
+   padding: 2px;
+   border: 1px solid white;
+}
+
+#bettingTable {
+   padding: 2px;
+   border: 1px solid white;
+}
+
+#allbet {
+   width: 100%;
+}
+
+#mybet {
+   width: 100%;
+}
+
+#allbet th {
+   width: 33%;
+   text-align: center;
+   background-color: #192C56;
+   font: bold 12pt Arial,Helvetica,sans-serif;
+   color: #FFFFFF;
+   padding: 5px;
+}
+
+#mybet th {
+   width: 20%;
+   text-align: center;
+   background-color: #192C56;
+   font: bold 10pt Arial,Helvetica,sans-serif;
+   color: #FFFFFF;
+   padding: 3px;
+}
+
+#mybet #hidecol {
+   width: 1%;
+   text-align: center;
+   background-color: #000000;
+   color: #FFFFFF;
+   padding: 3px;
+}
+
+#gameConsole td#wala {
+   text-align: center;
+   font: normal 12pt Arial,Helvetica,sans-serif;
+   background-color: #F1F1F1;
+   padding: 3px;
+}
+
+#gameConsole td#odd {
+   text-align: center;
+   background-color: #F1F1F1;
+   font: bold 12pt Arial,Helvetica,sans-serif;
+   color: #2D2D2D;
+   padding: 3px;
+}
+
+#gameConsole td#meron {
+   text-align: center;
+   font: normal 12pt Arial,Helvetica,sans-serif;
+   background-color: #F1F1F1;
+   padding: 3px;
+}
+
+#allbet #row0 td {
+   background-color: #AFF6AE;
+   padding: 3px;
+}
+
+#allbet #row1 td {
+   background-color: #8CFC8A;
+   padding: 3px;
+}
+
+#mybet td {
+   background-color: #AFF6AE;
+   padding: 2px;
+}
+
+#btnPlacebet {
+   width: 100%;
+}
+
+.colWin {
+   text-align: right;
+   color: #000000;
+}
+
+.totbetcol {
+   text-align: center;
+   color: #000000;
+}
+
+#running-result {
+	margin: 0;
+	padding: 0;
+	border: 1px solid black;
+	width: 60px;
+	height: 500px;
+	overflow: auto;
+	background-color: #000;
+}
+
+#running-result #tblResults {
+	color: #FFF;
+}
+
