@@ -49,15 +49,19 @@ function PlaceOrCancelBet(betMode)
 			creditAvailable = document.getElementById("userCreditsHidden").value;
 
             /* DEBUG: th33ye */
-			//if (parseFloat(creditAvailable) >= parseFloat(betamount))
-			//{
+            if (parseFloat(creditAvailable) >= parseFloat(betamount))
+            {
 				PostData('PlaceBet.php', qString, 'BetStatus');
-				//LoadMyBets();
-			//}
-			//else
-			//{
-			//	alert('Your credit is insufficient to place this bet.');
-			//}
+                /*
+                    DEBUG: th33ye
+                 */
+                clearBetTable();
+				LoadMyBets();
+			}
+			else
+			{
+				alert('Your credit is insufficient to place this bet.');
+			}
 		}
 		
 	}
@@ -138,8 +142,8 @@ function PlaceBetManual(betamount, betType, betOdds)
 			}
 			else
 			{
-				//if (parseFloat(creditAvailable) >= parseFloat(betamount))
-				//{
+				if (parseFloat(creditAvailable) >= parseFloat(betamount))
+				{
 					if (parseInt(betamount) > 0)
 					{
 						if (parseInt(betamount) >= 5)
@@ -164,11 +168,11 @@ function PlaceBetManual(betamount, betType, betOdds)
 							alert('Bet should not be less than 5 points.');
 						}
 					}
-				//}
-				//else
-				//{
-				//	alert('Your credit is insufficient to place this bet.');
-				//}
+				}
+				else
+				{
+					alert('Your credit is insufficient to place this bet.');
+				}
 			}
 	
 		}
@@ -400,11 +404,8 @@ function PlaceBetAfterKeyPressed(currentBetOnOdd, e, ctrl)
 			// end debug
 			if (parseInt(betamount) % 5 == 0)
 			{
-                /*
-                DEBUG: th33ye
-                 */
-				//if (parseFloat(creditAvailable) >= parseFloat(betamount))
-				//{
+				if (parseFloat(creditAvailable) >= parseFloat(betamount))
+				{
 					if (document.getElementById(idSpl[0] + '-' + (parseInt(idSpl[1]) + 1)) != null)
 					{
 						document.getElementById(idSpl[0] + '-' + (parseInt(idSpl[1]) + 1)).focus();
@@ -412,14 +413,14 @@ function PlaceBetAfterKeyPressed(currentBetOnOdd, e, ctrl)
 
 					PlaceBetManual(betamount, idSpl[0].substring(1), idSpl[1]);	
 					
-				//}
-				//else
-				//{
-				//	ctrl.value = '';
-                //
-				//
-				//	alert('Your credit is insufficient to place this bet.');
-				//}
+				}
+				else
+				{
+					ctrl.value = '';
+
+
+					alert('Your credit is insufficient to place this bet.');
+				}
 			}
 			else
 			{

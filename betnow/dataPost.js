@@ -22,45 +22,46 @@ function CreateGetXmlHttp()
 
 function PostData(PageUrl, QueryString, divId, currentOdd)
 {
-	xmlhttp15 = CreateGetXmlHttp();	
+    /*
+     DEBUG: th33ye
+     */
+    //$("#mybet").find("input").attr("disabled", "disabled");
+
+    $("#mybet :input").attr("disabled", "disabled");
+
+    xmlhttp15 = CreateGetXmlHttp();
 	xmlhttp15.onreadystatechange=	
 				function ReturnDisplay(currentOdd)
-				{	
-					  //alert('loading bets');
-					
-					  if (xmlhttp15.readyState==4 && xmlhttp15.status==200)
-					  {
-						  //alert('ok naman');
-						  LoadMyBets(currentOdd);
-						  //if (xmlhttp.responseText != "")
-						  //{									
-						  //}
-					  }	
+				{
+				    //alert('loading bets');
+
+                    if (xmlhttp15.readyState==4 && xmlhttp15.status==200)
+                    {
+                        //alert('ok naman');
+                    	LoadMyBets(currentOdd);
+						//if (xmlhttp.responseText != "")
+						//{
+						//}
+					}
 				}
 
     /*
         DEBUG: th33ye
      */
 
-    alert("POSTDATA: \n Value of PageUrl : " + PageUrl + "\n Value of QueryString : " + QueryString + "\n Value of divId : " + divId + "\n Value of currentOdd");
+    //alert("POSTDATA: \n Value of PageUrl : " + PageUrl + "\n Value of QueryString : " + QueryString + "\n Value of divId : " + divId + "\n Value of currentOdd");
 
     /*
-    $('#btnPlaceBet').attr('disabled', true);
-    $('#btnCancelBet').attr('disabled', true);
-    $('#Odds').attr('disabled', true);
-    $('#Betamount').attr('disabled', true);
+    $('#btnPlaceBet').attr('disabled', false);
+    $('#btnCancelBet').attr('disabled', false);
+    $('#Odds').attr('disabled', false);
+    $('#Betamount').attr('disabled', false);
     */
+
 
 	xmlhttp15.open("POST", PageUrl, true);
 	xmlhttp15.setRequestHeader('Content-Type', 'application/x-www-form-urlencoded');
 	xmlhttp15.send(QueryString);
-
-    /*
-    $('#btnPlaceBet').attr('enabled', true);
-    $('#btnCancelBet').attr('enabled', true);
-    $('#Odds').attr('enabled', true);
-    $('#Betamount').attr('enabled', true);
-    */
 }
 
 
